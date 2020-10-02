@@ -21,6 +21,8 @@ class Student
         grade TEXT
         )
         SQL
+        
+    DB[:conn]  
   end
 
 
