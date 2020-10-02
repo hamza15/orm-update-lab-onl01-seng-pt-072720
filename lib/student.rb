@@ -71,7 +71,10 @@ class Student
   end
   
   def update
-    
+    sql = <<-SQL
+      UPDATE  FROM students
+      WHERE name = ?
+    SQL
   end
 
 end
