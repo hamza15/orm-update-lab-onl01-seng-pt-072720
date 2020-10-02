@@ -66,7 +66,7 @@ class Student
       SELECT * FROM students
       WHERE name = ?
     SQL
-    array = DB[:conn].execute(sql, self.name).first
+    array = DB[:conn].execute(sql, self.name).[0]
     self.new_from_db(array)
   end
   
