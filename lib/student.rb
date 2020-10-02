@@ -75,7 +75,7 @@ class Student
       UPDATE students SET name = ?, grade = ? WHERE id = ?"
     SQL
     
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql, self.id, self.name, self.grade)
   end
 
 end
