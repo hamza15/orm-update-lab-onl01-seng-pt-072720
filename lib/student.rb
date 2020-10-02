@@ -66,9 +66,8 @@ class Student
       SELECT * FROM students
       WHERE name = ?
     SQL
-    DB[:conn].execute(sql, name).map do |row|
-      new_from_db(row)
-    end.first
+    array = DB[:conn].execute(sql, self.name)[0]
+    self.new_from_db(array)
   end
   
   def update
